@@ -1,3 +1,54 @@
 *{
-    background-color: pink;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*add background Image and make all item in center*/
+body{
+    margin: 0;
+    padding: 30px 90px 0;
+    height: 100vh;
+    background-image: url(../img/bg5.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.header{
+    padding: 0 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+}
+.socialicon{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.socialicon img{
+    height: 30px;
+    width: 30px;
+    background-color: white;
+    border-radius: 100%;
+}
+
+.logsignbtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: chocolate;
+    border-radius: 50px;
+    height: 40px;
+    width: 150px;
+    color: white;
+    gap: 4px;
+}
+.logsignbtn div{
+    width: 2px;
+    height: 40px;
+    background-color: grey;
 }
