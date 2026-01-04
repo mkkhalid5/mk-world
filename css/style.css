@@ -56,6 +56,10 @@ body{
     margin-bottom: 10px;
     margin-right: 80px;
 }
+.logsignbtn a{
+    text-decoration: none;
+    color:white;
+}
 .logsignbtn p{
     font-size: 12px;
     font-weight: bold;
