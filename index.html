@@ -1,39 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="img/icon.png" type="image/x-icon">
     <title>Mk World</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
 </head>
+
 <body>
     <!-- The video -->
-<video autoplay muted loop id="myVideo">
-  <source src="video/minecraft-dungeons.1920x1080.mp4" type="video/mp4">
-</video>
+    <video autoplay muted loop id="myVideo">
+        <source src="video/minecraft-dungeons.1920x1080.mp4" type="video/mp4">
+    </video>
 
-        <!--header section start-->
-        <div class="header">
-            <div class="socialicon">
-                <a href=""><img src="img/icon/magnifying-glass-solid-full.svg" alt="search"></a>
-                <a href=""><img src="img/icon/youtube-brands-solid-full.svg" alt="youtube"></a>
-                <a href=""><img src="img/icon/discord-brands-solid-full.svg" alt="discord"></a>
-            </div>
-            <div class="mlogo">
-                <img src="img/icon.png" alt="logo" height="80px">
-            </div>
-            <div class="logsignbtn">
-                <a href="login.html"><p class="t">LOGIN</p></a>
-                <div></div>
-                <p class="t">SIGN UP</p>
-            </div>
+    <!--header section start-->
+    <div class="header">
+        <div class="socialicon">
+            <a href=""><img src="img/icon/magnifying-glass-solid-full.svg" alt="search"></a>
+            <a href=""><img src="img/icon/youtube-brands-solid-full.svg" alt="youtube"></a>
+            <a href=""><img src="img/icon/discord-brands-solid-full.svg" alt="discord"></a>
         </div>
-        <!--header section end-->
+        <div class="mlogo">
+            <img src="img/icon.png" alt="logo" height="80px">
+        </div>
+        <div class="logsignbtn">
+            <a href="login.html">
+                <p class="t">LOGIN</p>
+            </a>
+            <div></div>
+            <p class="t">SIGN UP</p>
+        </div>
+    </div>
+    <!--header section end-->
 
-        <!--nav section start-->
-        <div class="nav">
+    <!--nav section start-->
+    <div class="nav">
+        <button class="menu" id="menubtn">☰</button>
+        <div class="navitem" id="navMenu">
             <a href="#">Home</a>
             <a href="#">Games</a>
             <a href="#">Purchase</a>
@@ -41,14 +48,27 @@
             <a href="#">Contact</a>
             <a href="#">Blog</a>
         </div>
-        <!--nav section end-->
+    </div>
+    <!--nav section end-->
 
-        <!--hero section start-->
-        <div class="hero">
-            <h1>The MK <span style="color: yellow;">WORLD</span></h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero exercitationem reprehenderit eaque esse sapiente, dignissimos commodi modi sint excepturi ipsam.</p>
-            <button>Buy Now</button>
-        </div>
-        <!--hero section end-->
+    <!--hero section start-->
+    <div class="hero">
+        <h1>The MK <span style="color: yellow;">WORLD</span></h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero exercitationem reprehenderit eaque esse
+            sapiente, dignissimos commodi modi sint excepturi ipsam.</p>
+        <button>Buy Now</button>
+    </div>
+    <!--hero section end-->
+
+    <script>
+        const menubtn = document.getElementById('menubtn');
+        const navMenu = document.getElementById('navMenu');
+
+        menubtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+    </script>
 </body>
+
 </html>
