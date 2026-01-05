@@ -1,49 +1,85 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 #myVideo {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  z-index: -1;
-}
-/*add background Image and make all item in center*/
-body{
-    margin: 0;
-    padding: 30px 150px 0;
-    height: 100vh;
-    background-image: url(../img/bg5.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    position: absolute;
+    right: 1;
+    bottom: 0;
+    max-width: 100vw;
+    min-height: 100vh;
+    z-index: -1;
 }
 
+/* Font Style start */
+
+.default-font {
+    font-family: "Jersey 10", sans-serif;
+    letter-spacing: 1px;
+}
+
+.text-shadow {
+    text-shadow: 2px 0px 2px black;
+}
+
+/* Font Style end */
+
+/* Button Animation Code */
+
+.buttonanimation {
+    font-size: 24px;
+    font-family: "Jersey 10", sans-serif;
+    letter-spacing: 1px;
+    height: 40px;
+    width: 120px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    position: relative;
+    background: linear-gradient(120deg, #f6ff00 0%, #ff8800 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.2em;
+    background-position: 0 100%;
+    transition: background-size 0.25s ease-in,
+        color 0.25s ease-in;
+}
+
+.buttonanimation:hover {
+    background-size: 100% 100%;
+    color: black;
+}
+
+/* Button Animation Code */
+
+/*add background Image and make all item in center*/
+
 /*Header styling start*/
-.header{
+.header {
     padding: 0 0px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 80px;
 }
-.socialicon{
+
+.socialicon {
     height: 80px;
     display: flex;
     align-items: center;
     gap: 20px;
+    padding-left: 150px;
 }
-.socialicon img{
+
+.socialicon img {
     height: 20px;
     width: 20px;
     background-color: white;
     border-radius: 100%;
 }
 
-.logsignbtn{
+.logsignbtn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -56,23 +92,27 @@ body{
     margin-bottom: 10px;
     margin-right: 80px;
 }
-.logsignbtn a{
+
+.logsignbtn a {
     text-decoration: none;
-    color:white;
+    color: white;
 }
-.logsignbtn p{
-    font-size: 12px;
-    font-weight: bold;
+
+.logsignbtn p {
+    font-size: 16px;
 }
-.logsignbtn div{
+
+.logsignbtn div {
     width: 1px;
     height: 28px;
     background-color: grey;
 }
+
 /*Header styling end*/
 
 /*navbar styling start*/
-.nav,.navitem{
+.nav,
+.navitem {
     margin-top: 10px;
     margin-bottom: 20px;
     display: flex;
@@ -80,95 +120,156 @@ body{
     justify-content: center;
     gap: 20px;
 }
-.navitem a{
+
+.navitem a {
     color: white;
     text-decoration: none;
-    font-weight: bolder;
     font-size: 25px;
-    font: bolder;
-    font-family: 'Times New Roman', Times, serif;
 }
+
 /*navbar styling end*/
 
 /*main part styling start*/
-.hero{
+.hero {
     margin-top: 20px;
-    width: 90%;
+    width: 100vw;
     max-width: 480px;
+    margin-bottom: 130px;
+    padding-left: 150px;
 }
-.hero h1{
+
+.hero h1 {
     color: white;
     font-size: clamp(40px, 10vw, 100px);
 }
-.hero p{
+
+.hero p {
     margin-top: 10px;
     margin-bottom: 20px;
     font-size: clamp(14px, 3vw, 20px);
     color: white;
 }
-.hero button{
-    height: 40px;
-    width: 120px;
-    background-color: transparent;
-    color: white;
-    border: none;
-    border-bottom: 1px solid yellow;
-}
-.menu{
+
+.menu {
     display: none;
 }
+
 /*main part styling end*/
+
+/* Game section Start */
+
+
+.games {
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.gamelist {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.card1 {
+    background-image: url(https://i.pinimg.com/736x/8a/8a/b4/8a8ab42e93738010d9c6af363bc7446a.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 400px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card1 h2 {
+    font-size: 80px;
+    text-align: center;
+    padding-top: 80px;
+    color: yellow;
+}
+
+.card1 p {
+    font-size: 40px;
+    text-align: center;
+    padding-top: 50px;
+    color: white;
+}
+
+.card1 button {
+    margin-top: 15px;
+    text-shadow: 1px 1px 2px black;
+}
+
+/* Game section Start */
 
 /*Tablet*/
 @media screen and (max-width:1024px) {
-    body{
+    body {
         padding: 30px 50px 0px;
     }
-    .hero h1{
+
+    .hero h1 {
         font-size: 70px;
     }
-    .nav a{
+
+    .nav a {
         font-size: 20px;
     }
-    .menu{
+
+    .menu {
         display: none;
     }
 }
 
 /*Mobile*/
-@media  screen and (max-width:768px) {
-    body{
+@media screen and (max-width:768px) {
+    body {
         padding: 20px 20px 0;
     }
-    .header{
+
+    .header {
         align-items: center;
         height: auto;
         gap: 10px;
     }
-    .socialicon{
+
+    .socialicon {
         display: nne;
     }
-    .hero{
+
+    .hero {
         width: 100%;
         text-align: center;
         margin: 10px auto;
     }
-    .hero h1{
+
+    .hero h1 {
         font-size: 50px;
     }
-    .nav{
+
+    .nav {
         flex-direction: column;
     }
-    .navitem{
+
+    .navitem {
         display: none;
         flex-direction: column;
         gap: 10px;
         text-align: center;
     }
-    .navitem.active{
+
+    .navitem.active {
         display: flex;
     }
-    .menu{
+
+    .menu {
         display: inline;
         font-size: 25px;
         width: 100px;
@@ -178,11 +279,13 @@ body{
         font-weight: bold;
         cursor: pointer;
     }
-    .logsignbtn{
+
+    .logsignbtn {
         margin-right: 0;
         width: 100px;
     }
-    .logsignbtn p{
+
+    .logsignbtn p {
         font-size: 10px;
     }
 }
